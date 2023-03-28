@@ -1,0 +1,59 @@
+
+/* Additional D3 CSS */ 
+
+.node {
+	stroke: #fff;
+	stroke-width: .5px;
+}
+
+.node text {
+  font: 5px sans-serif;
+  pointer-events: none;
+  text-anchor: middle;
+}
+
+.noborder
+      {
+        border:none;
+      }
+
+.link {
+	stroke: #999;
+	stroke-opacity: .6;
+}
+
+circle.leaf {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+path.hull {
+  fill: lightsteelblue;
+  fill-opacity: 0.3;
+}
+
+/* Misc CSS */ 
+
+.network2 {
+	background-color:white;
+}
+
+th {
+    text-align: left;
+}
+
+div.spec {
+  padding-bottom: 100px;}
+
+
+.no-shadow {
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-style: none
+}
+
+tr.spaceUnder > td
+{
+  padding-bottom: 1em;
+}

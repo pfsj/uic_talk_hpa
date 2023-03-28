@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Patrick Janulis - UIC HPA</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+		<link rel="stylesheet" href="css/d3.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #fff; padding-top: 50px; text-align: center;">
+						<h3>Patrick Janulis</h3>
+						<p>
+							<small style="color: #000;">Assistant Professor</small>
+						</p>
+						<div><img src="images/MSS.png" alt="ISGMH CONNECT Program" style="height: 100px; margin: 0 auto 4rem auto; margin-bottom: 0px;"></div>
+						<div><img src="images/Connect.png" alt="Third Coast CFAR" style="height: 100px; margin: 0 auto 4rem auto;" class="demo-logo">
+						<img src="images/TC-CFAR.jpeg" alt="Third Coast CFAR" style="height: 120px; margin: 0 auto 4rem auto;" class="demo-logo"></div>
+					</div>
+                </section>
+				<section>
+					<section data-auto-animate>
+						<div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 10px; padding-bottom: 10px; text-align: center;">
+							<h3>Today's talk</h3>
+							<ol style="font-size: 30px;" id="fragments">
+								<li value="1" class="fragment fade-in" style="margin: 20px 0; text-transform: none;">Improving accessibility of network measurement</li>
+								<li value="2" class="fragment fade-in" style="margin: 20px 0; text-transform: none;">Substance use, sexual networks, and HIV</li>
+							</ol>
+						</div>
+					</section>
+                    <section data-auto-animate>
+                        <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 10px; padding-bottom: 10px; text-align: center;">
+                        <h3>Today's talk</h3>
+                        <ol style="font-size: 30px;">
+                            <li value="0" style="margin: 20px 0; text-transform: none;">Brief digression on quantitative collaborations</li>
+                            <li value="1" style="margin: 20px 0; text-transform: none; color:lightgrey;">Improving accessibility of network measurement</li>
+                            <li value="2" style="margin: 20px 0; text-transform: none; color:lightgrey;">Substance use, sexual networks, and HIV</li>
+                        </ol>
+                    </section>
+					<section data-auto-animate>
+							<img class="r-frame" src="images/Schnall_2022.png" alt="Schnall 2022" style="height: 300px; margin: 0 auto 4rem auto;">
+					</section>
+					<section data-auto-animate>
+							<img class="r-frame" src="images/Taiwo_2021.png" alt="Taiwo 2021" style="height: 300px; padding-top:0px; padding-bottom:0px">
+                            <img class="r-frame" src="images/Garofalo_2022.png" alt="Garofalo 2022" style="height: 300px; padding-top:0px;">
+					</section>
+					<section data-auto-animate>
+							<img class="r-frame" src="images/Mustanski_2023.png" alt="Garofalo 2022" style="height: 300px; margin: 0 auto 4rem auto;">
+					</section>
+				</section>
+				<section>
+					<div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 10px; padding-bottom: 10px; text-align: center;">
+						<h3>Why networks?</h3>
+						<div><ol style="font-size: 30px;" id="fragments">
+							<li class="fragment fade-in-then-semi-out" style="margin: 20px 0; text-transform: none;">Essential to understand disease and behavior</li>
+							<li class="fragment fade-in-then-semi-out" style="margin: 20px 0; text-transform: none;">Emphasize context</li>
+							<li class="fragment fade-in-then-semi-out" style="margin: 20px 0; text-transform: none;">Non-linear and paradoxical	effects</li>
+						</ol></div>
+						<div><svg class="network"></svg></div>
+					</div>
+				</section>
+				<section data-auto-animate >
+					<div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 0px; text-align: center;">
+						<h4 style="text-transform: none; padding-top:50px; padding-bottom:50px;">How do we measure (personal) networks?</h4>
+					</div>
+				</section>
+				<section>
+					<div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); display:inline-block; background-color: white;">
+						<div style="display:inline-block;"><svg class="network2"></svg></div>
+					</div>
+				</section>
+				<section>
+                    <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white;">
+                        <div style = "display: inline-block; vertical-align: middle;">
+                            <svg class="network3"></svg>
+                        </div>
+                        <div style = "display: inline-block; vertical-align: middle;">
+                            <h2 style="font-size:60%">Network Data</h2>
+                            <table style="font-size:60%">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Hope</th>
+                                        <th>Chris</th>
+                                        <th>Sophie</th>
+                                        <th>Ellen</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Hope</td>
+                                        <td style="text-align: center;">-</td>
+                                        <td style="text-align: center;">0</td>
+                                        <td style="text-align: center;">1</td>
+                                        <td style="text-align: center;">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chris</td>
+                                        <td style="text-align: center;">0</td>
+                                        <td style="text-align: center;">-</td>
+                                        <td style="text-align: center;">0</td>
+                                        <td style="text-align: center;">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sophie</td>
+                                        <td style="text-align: center;">1</td>
+                                        <td style="text-align: center;">0</td>
+                                        <td style="text-align: center;">-</td>
+                                        <td style="text-align: center;">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ellen</td>
+                                        <td style="text-align: center;">1</td>
+                                        <td style="text-align: center;">1</td>
+                                        <td style="text-align: center;">1</td>
+                                        <td style="text-align: center;">-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+					</div>
+                </section>
+                <section> 
+                    <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 75px; text-align: center;">
+                        <img src="images/Project90_cite.png" alt="Dyadic Census" style="height: 500px; margin: 0 auto 4rem auto;" class="demo-logo">
+                    </div>
+                </section>
+                <section> 
+                    <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 0px; text-align: center; padding-top:75px">
+                        <div style="display: inline-block; vertical-align: middle;">
+                            <h2 style="font-size:60%; text-transform: none;">Name generation</h2>
+                            <img src="images/Hogan_namegen.png" alt="Wellman & Hogan Name Generator" style="height: 300px; margin: 0 auto 4rem auto;" class="demo-logo"></div>
+                        <div style="display: inline-block; vertical-align: middle;">
+                            <h2 style="font-size:60%; text-transform: none;">Sociogram</h2>
+                             <img src="images/Hogan_sociogram_cite.png" alt="Wellman & Hogan Sociogram" style="height: 300px; margin: 0 auto 4rem auto;" class="demo-logo"></div>
+                    </div>
+                </section>
+                <section>
+                    <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 0px; text-align: center; padding-top:75px">
+                        <div style="display: inline-block; vertical-align: middle;">
+                            <h2 style="font-size:60%; text-transform: none;">Name generation</h2>
+                            <img src="images/qualtrics_namegen.png" alt="Qualtrics network survey namegen" style="height: 350px; margin: 0 auto 4rem auto;" class="demo-logo"></div>
+                        <div style="display: inline-block; vertical-align: middle;">
+                            <h2 style="font-size:60%; text-transform: none;">Dyadic census</h2>
+                             <img src="images/qualtrics_alter_to_alter_cite.png" alt="Qualtrics network survey alter to alter " style="height: 350px; margin: 0 auto 4rem auto;" class="demo-logo"></div>
+                    </div>                </section>
+                <section data-transition="none"> 
+                    <div style="position:relative; height: 960; width: 720; box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 0px; padding-left:5px; text-align: center; padding-top:75px; padding-bottom:75px;">
+                        <div style="display: inline-block; vertical-align: middle;">
+                            <ul style="font-size:50%">
+                                <img src="images/networkcanvas_logo.svg" alt="Network Canvas Logo" style="height: 90px;">
+                                <li style="margin: 0px 0;">Tool for collecting social network data</li>
+                                <li style="margin: 20px 0;">Digitized version of visual sociogram method</li>
+                                <li style="margin: 20px 0;">Ideal for in-person interview/assisted</li>
+                                <li style="margin: 20px 0;">Optimized for touch screen</li>
+                                <li style="margin: 20px 0;">Easy to use and flexible</li>
+                                <li style="margin: 20px 0;">Free and open-source (R01 DA042711; Co-I)</li>
+                            </ul>
+                        </div>
+                        <div style="display: inline-block; vertical-align: middle; padding-top:70px;">
+                            <video width="384" height="288"><source data-src="video/josh-networkcanvas.mp4" type="video/mp4"/></video>
+                        </div>
+            </section>
+            <section data-transition="none" data-background-video="video/Namegen.mp4" data-background-video-loop data-background-video-muted>
+            </section>
+            <section data-transition="none" data-background-video="video/Sociogram.mp4" data-background-video-loop data-background-video-muted>
+            </section>
+            <section data-transition="none" data-background-video="video/CategoricalBin.mp4" data-background-video-loop data-background-video-muted>
+            </section>
+            <section data-transition="none"     style="width: 100%; height: 100%;" data-background-iframe="https://documentation.networkcanvas.com/" data-background-interactive>
+            </section>
+            <section data-background-iframe="https://partnerservices.networkcanvas.com/" data-background-interactive>
+            </section>
+                <section> 
+                    <div style="position:relative; height: 960; width: 720; box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 0px; padding-left:5px; text-align: center; padding-top:75px; padding-bottom:75px;">
+                        <div style="display: inline-block; vertical-align: middle;">
+                            <ul style="font-size:50%">
+                                <img src="images/networkcanvas_logo.svg" alt="Network Canvas Logo" style="height: 90px;">
+                                <li style="margin: 0px 0;">Despite uptake, Network Canvas has several limitations</li>
+                                <li style="margin: 20px 0;">Designed for in-person interviews (or assisted)</li>
+                                <li style="margin: 20px 0;">Integrated data management not robust</li>
+                                <li style="margin: 20px 0;">Longitudinal data collection challenging</li>
+                                <li style="margin: 0px 0;">Renewal project funding pending (R01 DA057973; MPI)</li>
+                                    <ul style="font-size:80%">
+                                        <li style="margin: 0px 0;">Cloud based and supports self-interviewing</li>
+                                        <li style="margin: 0px 0;">Self-hosted and service options</li>
+                                    </ul>
+                            </ul>
+                        </div>
+                        <div style="display: inline-block; vertical-align: middle; padding-top:100px;">
+                            <video width="384" height="288"><source data-src="video/josh-networkcanvas.mp4" type="video/mp4"/></video>
+                        </div>
+                    </div>
+                </section>
+                <section data-auto-animate >
+					<div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 0px; text-align: center;">
+						<h4 style="text-transform: none; padding-top:50px; padding-bottom:50px;">What can we do with this data?</h4>
+					</div>
+				</section>
+			</section>
+            <section>
+                <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 40px; padding-bottom: 40px; padding-right: 30px; padding-left: 30px; text-align: center;">
+                    <h4 style="text-transform: none; font-size:80%">Substance use, sexual networks, and HIV</h4>
+                    <ul style="font-size: 0px; font-size:43%;" id="fragments">
+                        <div class="fragment fade-in fade-in-then-semi-out">
+                            <li style="text-transform: none;">Well established link between substance use and HIV risk among sexual minority men</li>
+                            <ul>
+                                <li style="margin-bottom:20px;">In one national cohort, 1 in 3 recent seroconversions among MSM linked to methamphetamine (Grov et al., 2020)</li>
+                            </ul>
+                        </div>
+                        <li class="fragment fade-in fade-in-then-semi-out" style="text-transform: none; margin: 20px 0;">Substance use impacts HIV through sexual arousal, risk taking, and schedule disruptions </li>
+                        <div class="fragment fade-in fade-in-then-semi-out" >
+                            <li style="margin: 0px 0; text-transform: none;">Substance use associated with many HIV related behaviors:</li>
+                            <ul>
+                                <li style="font-size: 85%;">Condom use (Vosburgh et al., 2012)</li>
+                                <li style="font-size: 85%;">Prevention behavior (e.g., pre-exposure prophylaxis [PrEP]; Okafor et al., 2020)</li>
+                                <li style="font-size: 85%;">Treatment behavior (e.g., anti-retroviral therapy [ART]; Tsuyuki et al., 2019)</li>
+                                <li style="font-size: 85%; font-style: italic; margin-bottom:20px">Network structure (e.g., partnership rate, length of partnerships, homophily, etc.)</li>
+                            </ul>
+                         </div>    
+                        <div class="fragment fade-in fade-in-then-semi-out" >
+                            <li style="margin: 0px 0; text-transform: none;">To shape public health response we need to understand how these behaviors intersect to impact HIV incidence (Torres & Adam, 2016) </li>
+                            <ul style = "margin-bottom:18px">
+                                <li style="margin: 0px 0; font-size:85%; text-transform: none;">These behaviors are complex and interdependent</li>
+                                <li style="margin: 0px 0; font-size:85%; text-transform: none;">Challenging to independently estimate their association with HIV seroconversion</li>
+                                <li style="margin: 0px 0; font-size:85%; text-transform: none; font-weight: bold;">How do we identify the relative importance of these mechanisms to improve prevention?</li>
+                            </ul>
+                        </div>
+                        <li  class="fragment fade-in">Using network based epidemic models to achieve a holistic understanding of substance use and HIV </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 40px; padding-bottom: 40px; padding-right: 10px; padding-left: 10px; text-align: center;">
+                    <h4 style="margin: 0px 0; text-transform: none; padding-top:10px; font-size:80%;">Modeling substance use and HIV (PUG; R01 DA055502; PI)</h4>
+                    <ol style="margin: 20px 0;">
+                        <li style="font-size: 24px; margin: 20px 0;">Synthesize data on substance use and HIV among MSM</li>
+                        <li style="font-size: 24px; margin: 20px 0;">Integrate these parameters into existing epidemic models of HIV</li>
+                        <li style="font-size: 24px; margin: 20px 0;">Identify the most important mechanisms of substance use impacting HIV incidence</li>
+                        <li style="font-size: 24px; margin: 20px 0;">Experiment to find optimal and robust interventions</li>
+                    </ol>
+                </div>
+            </section>   
+            <section data-auto-animate> 
+                <div style="position:relative; height: 960; width: 720; box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 0px; padding-left:5px; padding-top:50px;">
+                    <h2 style="text-transform: none; font-size:80%; text-align: center; padding-bottom:0px">Modeling substance use and HIV (PUG; R01 DA055502; PI)</h2>
+                    <div style="display: inline-block; vertical-align: middle; width:60%; text-align: left; padding-left:15px; font-size:43%;">
+                        <ul>
+                            <li style="margin: 0px 0;">Synthesize data on substance use and HIV among MSM (Aim 1)</li>
+                                <ul>
+                                    <li style="font-size:85%;">Substance use and sexual networks</li>
+                                    <ul>
+                                        <li style="font-size:65%;">Differences in partnership rates</li>
+                                         <li style="font-size:65%;">Substance use homophily (i.e., assortativity)</li>
+                                        <li style="font-size:65%;">Substance use and partnership duration</li>
+                                    </ul>
+                                    <li  style="font-size:85%;">Substance use epidemiology</li>
+                                    <ul>
+                                        <li style="font-size:65%;">Prevalence of substances across lifespan</li>
+                                        <li style="font-size:65%;">Onset and trajectories of use</li>
+                                        <li style="font-size:65%; margin-bottom:15px">Substance use and prevention/care continuum</li>
+                                    </ul>
+                                </ul>
+                            <li style="margin: 0px 0;">Integrate these parameters into existing epidemic models of HIV (Aim 2)</li>
+                                <ul>
+                                    <li style="font-size:85%;"> EpiModel (R01 AI138783; Co-I) to build network based epidemic models</li>
+                                    <ul>
+                                        <li style="font-size:65%;">Temporal exponential random graph models (ERGMs) to simulate  networks</li>
+                                        <li style="font-size:65%;">Traditional disease transmission over these networks</li>
+                                    </ul>
+                                    <li style="font-size:85%;  margin-bottom:15px">Calibrated to local surveillance data</li>
+                                </ul>
+                            </li>
+                            <li style="margin: 15px 0;font-size:100%;">Model exploration using Extreme-scale Model Exploration with Swift (EMEWS)</li>
+                        </ul>
+                    </div>
+                    <div style = "display: inline-block; vertical-align: middle; padding-top: 75px; padding-left:15px; padding-right:15px; width:25%">
+                        <img class="frame" src="images/epimodel.gif" alt="EpiModel GIF" style="height: 200px; margin: 0 auto 4rem auto;">
+                    </div> 
+                </div>
+            </section>
+            <section data-auto-animate> 
+                <div style="position:relative; height: 960; width: 720; box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 0px; padding-left:5px; padding-top:50px;">
+                    <h2 style="text-transform: none; font-size:80%; text-align: center; padding-bottom:0px">Modeling substance use and HIV (PUG; R01 DA055502; PI)</h2>
+                    <div style="display: inline-block; vertical-align: middle; width:60%; text-align: left; padding-left:15px; font-size:43%;">
+                        <ul>
+                            <li style="margin: 0px 0;">Synthesize data on substance use and HIV among MSM (Aim 1)</li>
+                                <ul>
+                                    <li style="font-size:85%;">Substance use and sexual networks</li>
+                                    <ul>
+                                        <li style="font-size:65%;">Differences in partnership rates</li>
+                                         <li style="font-size:65%;">Substance use homophily (i.e., assortativity)</li>
+                                        <li style="font-size:65%;">Substance use and partnership duration</li>
+                                    </ul>
+                                    <li  style="font-size:85%;">Substance use epidemiology</li>
+                                    <ul>
+                                        <li style="font-size:65%;">Prevalence of substances across lifespan</li>
+                                        <li style="font-size:65%;">Onset and trajectories of use</li>
+                                        <li style="font-size:65%; margin-bottom:15px">Substance use and prevention/care continuum</li>
+                                    </ul>
+                                </ul>
+                            <li style="color: lightgrey; margin: 0px 0;">Integrate these parameters into existing epidemic models of HIV (Aim 2)</li>
+                                <ul>
+                                    <li style="color: lightgrey; font-size:85%;"> EpiModel (R01 AI138783; Co-I) to build network based epidemic models</li>
+                                    <ul>
+                                        <li style="color: lightgrey; font-size:65%;">Temporal exponential random graph models (ERGMs) to simulate  networks</li>
+                                        <li style="color: lightgrey; font-size:65%;">Traditional disease transmission over these networks</li>
+                                    </ul>
+                                    <li style="color: lightgrey; font-size:85%;  margin-bottom:15px">Calibrated to local surveillance data</li>
+                                </ul>
+                            </li>
+                            <li style="color: lightgrey; margin: 15px 0;font-size:100%;">Model exploration using Extreme-scale Model Exploration with Swift (EMEWS)</li>
+                        </ul>
+                    </div>
+                    <div style = "display: inline-block; vertical-align: middle; padding-top: 75px; padding-left:15px; padding-right:15px; width:25%">
+                        <img class="frame" src="images/epimodel.gif" alt="EpiModel GIF" style="height: 200px; margin: 0 auto 4rem auto;">
+                    </div> 
+                </div>
+            </section>
+            <section>
+                <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 40px; padding-bottom: 40px; padding-right: 10px; padding-left: 10px; text-align: center;">
+                    <h4 style="text-transform: none; font-size:80%">Substance use and sexual network characteristics</h4>
+                    <ol style="font-size: 20px; font-size:43%;">
+                                <div>
+                                    <li style="margin: 0px 0; text-transform: none;">Do MSM who use substances have more partners?</li>
+                                    <ul>
+                                        <li style="font-size: 18px;">Degree is a defining network characteristic</li>
+                                        <li style="font-size: 18px;">Increased sexual activities on days using drugs (Wray et al., 2020)</li>
+                                        <li style="font-size: 18px;">Some evidence of 'multiple sex partners' (Moradi et al., 2022)</li>
+                                        <li style="font-size: 18px;">What type of partners? (e.g., one-time, casual, main)</li>
+                                        <li style="font-size: 18px;">What types of substances?</li>
+                                    </ul>
+                                </div>
+                                <div style="visibility:hidden">
+                                    <li style="margin: 0px 0; text-transform: none; padding-top:10px">Are MSM who use substances more likely to have partners who also use substances?</li>
+                                    <ul>
+                                        <li style="font-size: 18px;">Frequently studied for race/ethnicity and age (Grey et al., 2015; Janulis et al., 2018) </li>
+                                        <li style="font-size: 18px;">Can amplify or extend existing disparities (Goodreau et al., 2017)</li>
+                                        <li style="font-size: 18px;">Interact with other group features (e.g., degree differences)</li>
+                                        <li style="font-size: 18px;">Difficult to measure</li>
+                                    </ul>
+                                </div>
+                     </ol>
+                </div>
+            </section>
+            <section data-transition="none"> 
+                <div style="position:relative; box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-left:5px; padding-top:10px;">
+                    <h2 style="text-transform: none; font-size:80%; text-align: center; padding-bottom:0px">Partnership rates and substance use</h2>
+                    <div style="display: inline-block; vertical-align:middle; width:40%; text-align: left; padding-left:5px; font-size:45%;">
+                        <ul> 
+                            <li style="margin: 20px 0;">Estimate association between substance use and partnership rates (past 6 months)</li>
+                            <li style="margin: 0px 0;">Used young MSM cohort data RADAR (U01 DA036939; Co-I)</li>
+                            <ul>
+                                <li style="margin: 0px 0; font-size:75%;">Up to 5 years of data. Visit every 6 months.</li>
+                                <li style="margin: 0px 0; font-size:75%;">Completed comprehensive sexual network interview and survey on substance use</li>
+                            </ul>
+                            <li style="margin: 20px 0;">Separate models for each outcome (one-time, casual, and main)</li>
+                            <li style="margin: 0px 0;">Used 'hybrid' glmm (negative binomial)</li>
+                            <ul>
+                                <li style="margin: 0px 0; font-size:75%;">Person-mean centered (within) and person-mean (between)</li>
+                                <li style="margin: 0px 0; font-size:75%;">
+                                    \[ Y_{i,t} = \gamma_{00} + \gamma_{01}\overline{X_{i}} + \gamma_{10}(X_{i,t} - \overline{X_{i}})  + u_{0i} + e_{i,t} \]
+                                </li>
+                             </ul>
+                             <li style="margin: 0px 0;">Figure shows within-person associations</li>
+                        </ul>
+                    </div>
+                    <div style = "display: inline-block; vertical-align: middle; width:50%">
+                        <img class="frame" src="images/partnership_rates.jpg" alt="EpiModel GIF" style="height: 450px; padding-top:0px">
+                    </div> 
+                </div>
+            </section>
+            <section data-transition="none"> 
+                <div style="position:relative; box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-left:5px; padding-top:10px;">
+                    <h2 style="text-transform: none; font-size:80%; text-align: center; padding-bottom:0px">Partnership rates and substance use</h2>
+                    <div style="display: inline-block; vertical-align:middle; width:40%; text-align: left; padding-left:5px; font-size:45%;">
+                        <ul> 
+                            <li style="margin: 20px 0;">Estimate association between substance use and partnership rates (past 6 months)</li>
+                            <li style="margin: 0px 0;">Used young MSM cohort data RADAR (U01 DA036939; Co-I)</li>
+                            <ul>
+                                <li style="margin: 0px 0; font-size:75%;">Up to 5 years of data. Visit every 6 months.</li>
+                                <li style="margin: 0px 0; font-size:75%;">Completed comprehensive sexual network interview and survey on substance use</li>
+                            </ul>
+                            <li style="margin: 20px 0;">Separate models for each outcome (one-time, casual, and main)</li>
+                            <li style="margin: 0px 0;">Used 'hybrid' glmm (negative binomial)</li>
+                            <ul>
+                                <li style="margin: 0px 0; font-size:75%;">Person-mean centered (within) and person-mean (between)</li>
+                                <li style="margin: 0px 0; font-size:75%;">
+                                    \[ Y_{i,t} = \gamma_{00} + \gamma_{01}\overline{X_{i}} + \gamma_{10}(X_{i,t} - \overline{X_{i}})  + u_{0i} + e_{i,t} \]
+                                </li>
+                             </ul>
+                             <li style="margin: 0px 0;">Figure shows within-person associations</li>
+                        </ul>
+                    </div>
+                    <div style = "display: inline-block; vertical-align: middle; width:50%">
+                        <img class="frame" src="images/partnership_rates_both.jpg" alt="EpiModel GIF" style="height: 450px; padding-top:0px">
+                    </div> 
+                </div>
+            </section>
+            <section data-transition="none"> 
+                <div style="position:relative; box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-left:5px; padding-top:10px;">
+                    <h2 style="text-transform: none; font-size:80%; text-align: center; padding-bottom:0px">Partnership rates and substance use</h2>
+                    <div style="display: inline-block; vertical-align:middle; width:40%; text-align: left; padding-left:5px; font-size:45%;">
+                        <ul> 
+                            <li style="margin: 20px 0;">Estimate association between substance use and partnership rates (past 6 months)</li>
+                            <li style="margin: 0px 0;">Used young MSM cohort data RADAR (U01 DA036939; Co-I)</li>
+                            <ul>
+                                <li style="margin: 0px 0; font-size:75%;">Up to 5 years of data. Visit every 6 months.</li>
+                                <li style="margin: 0px 0; font-size:75%;">Completed comprehensive sexual network interview and survey on substance use</li>
+                            </ul>
+                            <li style="margin: 20px 0;">Separate models for each outcome (one-time, casual, and main)</li>
+                            <li style="margin: 0px 0;">Used 'hybrid' glmm (negative binomial)</li>
+                            <ul>
+                                <li style="margin: 0px 0; font-size:75%;">Person-mean centered (within) and person-mean (between)</li>
+                                <li style="margin: 0px 0; font-size:75%;">
+                                    \[ Y_{i,t} = \gamma_{00} + \gamma_{01}\overline{X_{i}} + \gamma_{10}(X_{i,t} - \overline{X_{i}})  + u_{0i} + e_{i,t} \]
+                                </li>
+                             </ul>
+                             <li style="margin: 0px 0;">Figure shows within-person associations</li>
+                        </ul>
+                    </div>
+                    <div style = "display: inline-block; vertical-align: middle; width:50%">
+                        <img class="frame" src="images/partnership_rates_casual.jpg" alt="EpiModel GIF" style="height: 450px; padding-top:0px">
+                    </div> 
+                </div>
+            </section>
+            <section data-transition="none"> 
+                <section>
+                <div style="position:relative; box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-left:5px; padding-top:10px;">
+                    <h2 style="text-transform: none; font-size:80%; text-align: center; padding-bottom:0px">Partnership rates and substance use</h2>
+                    <div style="display: inline-block; vertical-align:middle; width:40%; text-align: left; padding-left:5px; font-size:45%;">
+                        <ul> 
+                            <li style="margin: 20px 0;">Estimate association between substance use and partnership rates (past 6 months)</li>
+                            <li style="margin: 0px 0;">Used young MSM cohort data RADAR (U01 DA036939; Co-I)</li>
+                            <ul>
+                                <li style="margin: 0px 0; font-size:75%;">Up to 5 years of data. Visit every 6 months.</li>
+                                <li style="margin: 0px 0; font-size:75%;">Completed comprehensive sexual network interview and survey on substance use</li>
+                            </ul>
+                            <li style="margin: 20px 0;">Separate models for each outcome (one-time, casual, and main)</li>
+                            <li style="margin: 0px 0;">Used 'hybrid' glmm (negative binomial)</li>
+                            <ul>
+                                <li style="margin: 0px 0; font-size:75%;">Person-mean centered (within) and person-mean (between)</li>
+                                <li style="margin: 0px 0; font-size:75%;">
+                                    \[ Y_{i,t} = \gamma_{00} + \gamma_{01}\overline{X_{i}} + \gamma_{10}(X_{i,t} - \overline{X_{i}})  + u_{0i} + e_{i,t} \]
+                                </li>
+                             </ul>
+                             <li style="margin: 0px 0;">Figure shows within-person associations</li>
+                        </ul>
+                    </div>
+                    <div style = "display: inline-block; vertical-align: middle; width:50%">
+                        <img class="frame" src="images/partnership_rates_onetime.jpg" alt="EpiModel GIF" style="height: 450px; padding-top:0px">
+                    </div> 
+                </section>
+                <section>
+                    <img class="r-frame" src="images/PartnershipRates_Table2.png" alt="Partnership Rates Table 2" style="height: 500px; margin: 0 auto 4rem auto;">
+                </section>
+                <section>
+                    <img class="r-frame" src="images/PartnershipRates_Table1.png" alt="Partnership Rates Table 2" style="height: 600px; margin: 0 auto 4rem auto;">
+                </section>
+            </section>
+            <section>
+                <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 40px; padding-bottom: 40px; padding-right: 10px; padding-left: 10px; text-align: center;">
+                    <h4 style="margin: 0px 0; text-transform: none; padding-top:10px; font-size:80%">What does it mean?</h4>
+                    <ul style="margin: 20px 0;">
+                        <li style="font-size: 24px; margin: 20px 0;">Confirmed higher partnership rates</li>
+                        <li style="font-size: 24px; margin: 20px 0;">Occurs during periods that substance use is reported</li>
+                        <li style="font-size: 24px; margin: 20px 0;">Relationships are substance and partnership type specific</li>
+                        <li style="font-size: 24px; margin: 20px 0;">Combination of increased sexual arousal and chemsex</li>
+                    </ul>
+                </div>
+            </section>            
+            <section>
+                <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 40px; padding-bottom: 40px; padding-right: 10px; padding-left: 10px; text-align: center;">
+                    <h4 style="text-transform: none; font-size:80%">Substance use and sexual network characteristics</h4>
+                    <ol style="font-size: 20px; font-size:43%;">
+                                <div style="color:lightgrey;">
+                                    <li style="margin: 0px 0; text-transform: none;">Do MSM who use substances have more partners?</li>
+                                    <ul>
+                                        <li style="font-size: 18px;">Degree is a defining network characteristic</li>
+                                        <li style="font-size: 18px;">Increased sexual activities on days using drugs (Wray et al., 2020)</li>
+                                        <li style="font-size: 18px;">Some evidence of 'multiple sex partners' (Moradi et al., 2022)</li>
+                                        <li style="font-size: 18px;">What type of partners? (e.g., one-time, casual, main) </li>
+                                        <li style="font-size: 18px; margin: 0px 0px;">What types of substances?</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <li style="margin: 0px 0; text-transform: none; padding-top:10px">Are MSM who use substances more likely to have partners who also use substances?</li>
+                                    <ul>
+                                        
+                                        <li style="font-size: 18px;">Can amplify or extend existing disparities (Goodreau et al., 2017)</li>
+                                        <li style="font-size: 18px;">Frequently studied for race/ethnicity and age (Grey et al., 2015; Janulis et al., 2018) </li>
+                                        <li style="font-size: 18px;">Interact with other group features (e.g., degree differences)</li>
+                                        <li style="font-size: 18px;">Difficult to measure</li>
+                                    </ul>
+                                </div>
+                     </ol>
+                </div>
+            </section>
+            <section data-transition="none"> 
+                <div style="position:relative; box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-left:5px; padding-top:10px;">
+                    <h2 style="text-transform: none; font-size:80%; text-align: center; padding-bottom:0px">Substance use homophily in sexual networks of MSM</h2>
+                    <div style="display: inline-block; vertical-align:middle; width:40%; text-align: left; padding-left:5px; font-size:45%;">
+                        <ul> 
+                            <li style="margin: 20px 0;">Use data from RADAR to build participant-to-participant sexual network</li>
+                            <li style="margin: 20px 0;">From egocentric network data, used entity resolution used to match participants (R21 LM012578; PI)</li>
+                            <li style="margin: 20px 0;">Self-reported substance use to categorize individuals</li>
+                            <li style="margin: 00px 0;">ERGMs used to estimate substance use homophily controlling for other features</li>
+                            <ul>
+                                <li style="font-size:65%;">Similar to logistic regression</li>
+                                <li style="margin: 0px 0; font-size:65%;">Predicting probability of a tie between two given nodes</li>
+                                <li style="margin: 0px 0; font-size:65%;">Can use features of nodes, edges, and network structure</li>
+                            </ul>
+                            <li style="margin: 20px 0;">Figure shows any non-marijuana drug use</li>
+                        </ul>
+                    </div>
+                    <div style = "display: inline-block; vertical-align: middle; width:50%">
+                        <img class="frame" src="images/Homophily_network.svg" alt="EpiModel GIF" style="height: 450px; padding-top:0px">
+                    </div> 
+                </div>
+            </section>
+            <section data-transition="none"> 
+                <div style="position:relative; box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-left:5px; padding-top:10px;">
+                    <h2 style="text-transform: none; font-size:80%; text-align: center; padding-bottom:0px">Substance use homophily in sexual networks of MSM</h2>
+                    <div style="display: inline-block; vertical-align:middle; width:40%; text-align: left; padding-left:5px; font-size:45%;">
+                        <ul> 
+                            <li style="margin: 20px 0;">Use data from RADAR to build participant-to-participant sexual network</li>
+                            <li style="margin: 20px 0;">From egocentric network data, used entity resolution used to match participants (R21 LM012578; PI)</li>
+                            <li style="margin: 20px 0;">Self-reported substance use to categorize individuals</li>
+                            <li style="margin: 00px 0;">ERGMs used to estimate substance use homophily controlling for other features</li>
+                            <ul>
+                                <li style="font-size:65%;">Similar to logistic regression</li>
+                                <li style="margin: 0px 0; font-size:65%;">Predicting probability of a tie between two given nodes</li>
+                                <li style="margin: 0px 0; font-size:65%;">Can use features of nodes, edges, and network structure</li>
+                            </ul>
+                            <li style="margin: 20px 0;">Figure shows any non-marijuana drug use</li>
+                        </ul>
+                    </div>
+                    <div style = "display: inline-block; vertical-align: middle; width:50%">
+                        <img class="frame" src="images/ergm_results_1.png" alt="EpiModel GIF" style="height: 450px; padding-top:0px">
+                    </div> 
+                </div>
+            </section>
+            <section data-transition="none"> 
+                <div style="position:relative; box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-left:5px; padding-top:10px;">
+                    <h2 style="text-transform: none; font-size:80%; text-align: center; padding-bottom:0px">Substance use homophily in sexual networks of MSM</h2>
+                    <div style="display: inline-block; vertical-align:middle; width:40%; text-align: left; padding-left:5px; font-size:45%;">
+                        <ul> 
+                            <li style="margin: 20px 0;">Use data from RADAR to build participant-to-participant sexual network</li>
+                            <li style="margin: 20px 0;">From egocentric network data, used entity resolution used to match participants (R21 LM012578; PI)</li>
+                            <li style="margin: 20px 0;">Self-reported substance use to categorize individuals</li>
+                            <li style="margin: 00px 0;">ERGMs used to estimate substance use homophily controlling for other features</li>
+                            <ul>
+                                <li style="font-size:65%;">Similar to logistic regression</li>
+                                <li style="margin: 0px 0; font-size:65%;">Predicting probability of a tie between two given nodes</li>
+                                <li style="margin: 0px 0; font-size:65%;">Can use features of nodes, edges, and network structure</li>
+                            </ul>
+                            <li style="margin: 20px 0;">Figure shows any non-marijuana drug use</li>
+                        </ul>
+                    </div>
+                    <div style = "display: inline-block; vertical-align: middle; width:50%">
+                        <img class="frame" src="images/ergm_results_2.png" alt="EpiModel GIF" style="height: 450px; padding-top:0px">
+                    </div> 
+                </div>
+            </section>
+            <section data-transition="none"> 
+                <section>
+                    <div style="position:relative; box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-left:5px; padding-top:10px;">
+                        <h2 style="text-transform: none; font-size:80%; text-align: center; padding-bottom:0px">Substance use homophily in sexual networks of MSM</h2>
+                        <div style="display: inline-block; vertical-align:middle; width:40%; text-align: left; padding-left:5px; font-size:45%;">
+                            <ul> 
+                                <li style="margin: 20px 0;">Use data from RADAR to build participant-to-participant sexual network</li>
+                                <li style="margin: 20px 0;">From egocentric network data, used entity resolution used to match participants (R21 LM012578; PI)</li>
+                                <li style="margin: 20px 0;">Self-reported substance use to categorize individuals</li>
+                                <li style="margin: 00px 0;">ERGMs used to estimate substance use homophily controlling for other features</li>
+                                <ul>
+                                    <li style="font-size:65%;">Similar to logistic regression</li>
+                                    <li style="margin: 0px 0; font-size:65%;">Predicting probability of a tie between two given nodes</li>
+                                    <li style="margin: 0px 0; font-size:65%;">Can use features of nodes, edges, and network structure</li>
+                                </ul>
+                                <li style="margin: 20px 0;">Figure shows any non-marijuana drug use</li>
+                            </ul>
+                        </div>
+                        <div style = "display: inline-block; vertical-align: middle; width:50%">
+                            <img class="frame" src="images/ergm_results_3.png" alt="EpiModel GIF" style="height: 450px; padding-top:0px">
+                        </div> 
+                    </div>
+                </section>
+                <section>
+                    <img class="r-frame" src="images/ERGMS_Statnet.png" alt="ERGM_Statnet.png" style="height: 300px; margin: 0 auto 4rem auto;">
+                </section>
+            </section>
+            <section>
+                <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 40px; padding-bottom: 40px; padding-right: 10px; padding-left: 10px; text-align: center;">
+                    <h4 style="margin: 0px 0; text-transform: none; padding-top:10px; font-size:80%">What does it mean?</h4>
+                    <ul style="margin: 20px 0;">
+                        <li style="font-size: 24px; margin: 20px 0;">Drug use homophily is present in these sexual networks</li>
+                        <li style="font-size: 24px; margin: 20px 0;">Could amplify impact of partnership rates / condom use</li>
+                        <li style="font-size: 24px; margin: 20px 0;">Appears substance specific</li>
+                        <li style="font-size: 24px; margin: 20px 0;">Selection or influence?</li>
+                    </ul>
+                </div>
+            </section>
+            <section data-auto-animate>
+                <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 40px; padding-bottom: 40px; padding-right: 10px; padding-left: 10px; text-align: center;">
+                    <h4 style="margin: 0px 0; text-transform: none; padding-top:10px; font-size:80%">What does it mean?</h4>
+                </div>
+            </section>
+            <section data-auto-animate>
+                <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 40px; padding-bottom: 40px; padding-right: 10px; padding-left: 10px; text-align: center;">
+                    <h4 style="margin: 0px 0; text-transform: none; padding-top:10px; font-size:80%">What difference does it make?</h4>
+                </div>
+            </section>
+            <section data-auto-animate>
+                <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 40px; padding-bottom: 40px; padding-right: 10px; padding-left: 10px; text-align: center;">
+                    <h4 style="margin: 0px 0; text-transform: none; padding-top:10px; font-size:80%">What difference does it make?</h4>
+                    <ul style="margin: 20px 0;">
+                        <li style="font-size: 24px; margin: 20px 0;">Difficult to know how HIV incidence impacted by these parameters</li>
+                        <li style="font-size: 24px; margin: 20px 0;">Requires a principled approach that can incorporate all information</li>
+                        <li style="font-size: 24px; margin: 20px 0;">What difference, who's impacted, what can we do with this knowledge?</li>
+                        <li style="font-size: 24px; margin: 20px 0;">One quick (toy) example</li>
+                    </ul>
+                </div>
+            </section>
+            <section data-auto-animate>
+                <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 40px; padding-bottom: 40px; padding-right: 10px; padding-left: 10px; text-align: center;">
+                    <h4 style="margin: 0px 0; text-transform: none; padding-top:10px; font-size:80%">Model setup</h4>
+                    <ul style="margin: 20px 0; font-size:80%;">
+                        <li style="font-size: 24px; margin: 20px 0;">Use the observed mean degree differences between poppers and non-poppers users</li>
+                        <li style="font-size: 24px; margin: 20px 0;">Experiment: 1) Homophily and 2) without homophily</li>
+                        <li style="font-size: 24px; margin: 20px 0;">Traditional HIV acquisition model (e.g., treatment cascade)</li>
+                        <li style="font-size: 24px; margin: 20px 0;">Network of 500 individuals (38% poppers) for  10 years (12 times)</li>
+                        <li style="font-size: 24px; margin: 20px 0;">Both groups start with same prevalence</li>
+                        <li style="font-size: 24px; margin: 20px 0;">Not reasonably calibrated!</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 50px; text-align: center;">
+                    <h4 style="text-transform:none; font-size:80%">Homophily (Model 1)</h4>
+                    <img src="images/Sim1_legend.jpg" alt="Simulation 1" style="height: 500px; margin: 0 auto 4rem auto;" class="demo-logo">
+                </div>
+            </section>
+            <section>
+                <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 50px; text-align: center;">
+                    <h4 style="text-transform:none; font-size:80%">No (additional) homophily (Model 2)</h4>
+                    <img src="images/Sim2_Legend.jpg" alt="Simulation 2" style="height: 500px; margin: 0 auto 4rem auto;" class="demo-logo">
+                </div>
+            </section>
+                <section data-transition="none">
+                    <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 50px; text-align: center;">
+                        <img src="images/Simulation_Incidence_Legend.jpg" alt="Simulation Incidence" style="height: 500px; margin: 0 auto 4rem auto;" class="demo-logo">
+                    </div>
+                </section>
+                <section data-transition="none">
+                    <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 50px; text-align: center;">
+                        <img src="images/Simulation_Incidence_All.jpg" alt="Simulation Incidence All" style="height: 500px; margin: 0 auto 4rem auto;" class="demo-logo">
+                    </div>
+                </section>
+                <section data-transition="none">
+                    <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 50px; text-align: center;">
+                        <img src="images/Simulation_Incidence_Poppers.jpg" alt="Simulation Incidence Poppers" style="height: 500px; margin: 0 auto 4rem auto;" class="demo-logo">
+                    </div>
+                </section>
+                <section data-transition="none">
+                    <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 50px; text-align: center;">
+                        <img src="images/Simulation_Incidence_NoPoppers.jpg" alt="Simulation Incidence No Poppers" style="height: 500px; margin: 0 auto 4rem auto;" class="demo-logo">
+                    </div>
+                </section>
+                <section>
+                    <div style="box-shadow: 0 1px 5px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: white; color: #000; padding-top: 50px; text-align: center;">
+                        <img src="images/ThankYou.png" alt="Simulation Incidence No Poppers" style="height: 500px; margin: 0 auto 4rem auto;" class="demo-logo">
+                    </div>
+                </section>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+        <script src="plugin/math/math.js"></script>
+
+		<!-- For network visualization -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/d3.v3.min.js"></script>
+		<script src="js/d3network.js"></script>
+
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				rtl: false,
+                backgroundTransition: 'fade',
+
+				autoPlayMedia: true,
+
+				// Parallax background image
+				parallaxBackgroundImage: 'images/bg-new-3.svg',
+				// Parallax background size
+				parallaxBackgroundSize: '4000px 2000px',
+                parallaxBackgroundHorizontal: 30,
+                
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
+
+			});
+
+		</script>
+
+	</body>
+</html>
